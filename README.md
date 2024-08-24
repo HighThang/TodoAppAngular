@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# TodoAppAngular
-=======
-# NccAngularTraining
-
 ## TODO App
 
 ### Requirement
