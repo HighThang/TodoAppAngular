@@ -1,0 +1,7 @@
+<input
+  [ngClass]="datePickerClass"
+  type="datetime-local"
+  [value]="selectedDateTime"
+  (input)="onDateTimeChange($event)"
+  (blur)="onBlur()"
+/>

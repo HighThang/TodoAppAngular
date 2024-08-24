@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: floralwhite;
+  border-bottom: 1px solid #e6e9ed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  flex-wrap: wrap;
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .counter {
+      position: relative;
+      top: -20px;
+      right: 44px;
+      background-color: #1c89ff;
+      color: white;
+      border-radius: 50%;
+      padding: 4px 10px;
+      font-size: 14px;
+      font-weight: bold;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transform: translateX(50%);
+    }
+
+    app-radio-button {
+      margin-right: 10px;
+    }
+
+    app-button {
+      margin-left: 20px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+
+      &.btn-add {
+        background-color: #3498db;
+        color: #fff;
+
+        &:hover {
+          background-color: #2980b9;
+        }
+      }
+
+      app-icon {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    h3 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(90deg, rgb(100, 237, 168), cornflowerblue);
+      background-clip: text;
+      color: transparent;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

@@ -1,0 +1,136 @@
+.todo-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: cornsilk;
+  border-radius: 10px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+
+  .todo-row {
+    display: flex;
+    padding: 14px;
+
+    .todo-header {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      border-bottom: 1px solid #e6e9ed;
+      border-radius: 5px;
+      margin: 0 auto;
+      background-color: rgb(255, 249, 186);
+      border-bottom: 1px solid #e6e9ed;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+      font-weight: 700;
+      color: #555;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .todo-cell {
+      padding: 0 10px;
+      font-size: 1rem;
+      color: rgb(89, 147, 255);
+
+      &:nth-child(1) {
+        flex: 1;
+      }
+
+      &:nth-child(2) {
+        flex: 0.5;
+      }
+
+      &:nth-child(3) {
+        flex: 0.5;
+      }
+
+      &:nth-child(4) {
+        flex: 0.5;
+      }
+
+      &:nth-child(5) {
+        flex: 0.5;
+        border-bottom: none;
+      }
+
+      &:nth-child(6) {
+        flex: 1;
+      }
+    }
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.todo-cell {
+  padding: 0 10px;
+  font-size: 1rem;
+  color: #333;
+
+  &:nth-child(1) {
+    flex: 1;
+  }
+
+  &:nth-child(2) {
+    flex: 0.5;
+  }
+
+  &:nth-child(3) {
+    flex: 0.5;
+  }
+
+  &:nth-child(4) {
+    flex: 0.5;
+  }
+
+  &:nth-child(5) {
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:nth-child(6) {
+    flex: 1;
+  }
+
+  &:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: rgb(255, 255, 221);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0 10px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, cornflowerblue, rgb(44, 255, 146));
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+app-input {
+  padding-right: 20px;
+  font-size: 1rem;
+  width: 300px;
+}

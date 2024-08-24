@@ -1,0 +1,57 @@
+$input-padding: 10px;
+$input-border-radius: 4px;
+
+:host {
+  display: block;
+}
+
+app-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+
+  .input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    h3 {
+      margin: 0;
+      font-size: 16px;
+      color: #333;
+      width: 100px;
+    }
+  }
+
+  app-button {
+    align-self: flex-end;
+    margin-right: 10px;
+  }
+
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .checkDate {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+}

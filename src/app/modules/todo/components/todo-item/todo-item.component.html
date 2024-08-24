@@ -1,0 +1,37 @@
+<div class="todo-table">
+  <div class="todo-row">
+    <div class="todo-cell">{{ todo.name }}</div>
+    <div class="todo-cell">{{ todo.startDate | date: 'dd/MM/yyyy hh:mm a' }}</div>
+    <div class="todo-cell">{{ todo.endDate | date: 'dd/MM/yyyy hh:mm a' }}</div>
+    <div class="todo-cell status-cell">
+      <span [ngClass]="{ 'active' : todo.status === ETodoStatus.Active , 
+                        'completed' : todo.status === ETodoStatus.Completed,
+                        'pending' : todo.status === ETodoStatus.Pending,
+                        'failed' : todo.status === ETodoStatus.Failed }">
+        {{ todo.status }}
+      </span>
+    </div>
+    <div class="todo-cell">
+      <div class="progress-bar">
+        <div class="progress-bar__fill" [ngClass]="{
+            'green': progress > 50,
+            'yellow': progress > 20 && progress <= 50,
+            'red': progress <= 20
+          }" [style.width.%]="progress">
+        </div>
+      </div>
+      {{ remainingTime }}
+    </div>
+    <div class="todo-cell">
+      <app-button [size]="'small'" [type]="'success'" (click)="onMarkAsCompleted(todo.id)">
+        <app-icon [type]="EIcon.Check"></app-icon>
+      </app-button>
+      <app-button [size]="'small'" [type]="'warning'" (click)="onEdit(todo)">
+        <app-icon [type]="EIcon.Edit"></app-icon>
+      </app-button>
+      <app-button [size]="'small'" [type]="'danger'" (click)="onDelete(todo.id)">
+        <app-icon [type]="EIcon.Delete"></app-icon>
+      </app-button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<app-dialog [title]="dialogTitle" [isVisible]="isVisible" (closed)="onCloseDialog()">
+  <form [formGroup]="todoForm" (ngSubmit)="onSubmit()" class="input-container">
+    <div class="input-group">
+      <h3>Name Todo:</h3>
+      <app-input formControlName="name" placeholder="Title"></app-input>
+      <div *ngIf="showErrors && todoForm.controls['name'].invalid && todoForm.controls['name'].errors?.['required']" class="error">
+        Todo name is required.
+      </div>
+    </div>
+    <div class="input-group">
+      <h3>Start Date:</h3>
+      <app-datepicker formControlName="startDate"></app-datepicker>
+      <div *ngIf="showErrors && todoForm.controls['startDate'].invalid && todoForm.controls['startDate'].errors?.['required']" class="error">
+        Start date is required.
+      </div>
+    </div>
+    <div class="input-group">
+      <h3>End Date:</h3>
+      <app-datepicker formControlName="endDate"></app-datepicker>
+      <div *ngIf="showErrors && todoForm.controls['endDate'].invalid && todoForm.controls['endDate'].errors?.['required']" class="error">
+        End date is required.
+      </div>
+    </div>
+    <div class="checkDate" *ngIf="showErrors && todoForm.errors?.['dateComparison']">
+      Start date must be earlier than end date.
+    </div>
+    <app-button type="primary">Submit</app-button>
+  </form>
+</app-dialog>

@@ -1,0 +1,20 @@
+<app-todo-header 
+  (addTodo)="showAddForm()" 
+  (filterChange)="filterTodos($event)">
+</app-todo-header>
+
+<br>
+
+<app-todo-list 
+  [todos]="filteredTodos"
+  (searchQueryChange)="onSearch($event)"
+  (edit)="showEditForm($event)">
+</app-todo-list>
+
+<app-todo-form 
+  [isVisible]="isFormDialogVisible" 
+  [todo]="selectedTodo"
+  (closed)="closeForm()">
+</app-todo-form>
+
+<app-toast></app-toast>

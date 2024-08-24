@@ -1,0 +1,25 @@
+<div class="todo-table">
+  <div class="header-container">
+    <h3>Todo List</h3>
+    <app-input placeholder="Search..." (input)="onSearch($event)"></app-input>
+  </div>
+
+  <div class="todo-row">
+    <div class="todo-header">
+      <div class="todo-cell">Name</div>
+      <div class="todo-cell">Start Date</div>
+      <div class="todo-cell">End Date</div>
+      <div class="todo-cell">Status</div>
+      <div class="todo-cell">Progress</div>
+      <div class="todo-cell">Actions</div>
+    </div>
+  </div>
+
+  <div *ngIf="todos">
+    <div *ngFor="let todo of todos; trackBy: trackByTodo">
+      <app-todo-item [todo]="todo" (edit)="onEdit($event)">
+      </app-todo-item>
+      <br>
+    </div>
+  </div>
+</div>

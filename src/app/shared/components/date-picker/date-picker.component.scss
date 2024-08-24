@@ -1,0 +1,54 @@
+:host {
+    display: inline-block;
+    margin: 10px;
+}
+
+.datetimepicker {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    height: 20px;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, transform 0.3s ease;
+
+    &:hover {
+        border-color: #0056b3;
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+    }
+
+    &:active {
+        border-color: #003f7f;
+        background-color: #e9f5ff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.7);
+        transform: scale(0.98);
+    }
+
+    &:focus {
+        border-color: #0056b3;
+        outline: none;
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        outline: none;
+        transform: scale(1.02);
+    }
+
+    &:focus::placeholder {
+        color: transparent;
+    }
+
+    &:blur {
+        border-color: #999;
+        background-color: #fff;
+    }
+
+    &.filled {
+        border-color: #007bff;
+        background-color: #e9f5ff;
+    }
+
+    &.empty {
+        border-color: #999;
+        background-color: #f5f5f5;
+    }
+}

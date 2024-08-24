@@ -1,0 +1,14 @@
+<div class="todo-header">
+    <div class="todo-header__buttons" *ngFor="let status of todoStatuses">
+        <app-radio-button [label]="status.label" (click)="setFilter(status.value)">
+        </app-radio-button>
+        <span class="counter">{{ count[status.key] }}</span>
+    </div>
+    <app-button (click)="openDialog()" [type]="'primary'">
+        <app-icon [type]="EIcon.Add"></app-icon>
+        Add
+    </app-button>
+    <div class="todo-header__logo">
+        <h3>Todo App</h3>
+    </div>
+</div>

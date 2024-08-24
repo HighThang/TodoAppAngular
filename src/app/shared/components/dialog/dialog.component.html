@@ -1,0 +1,20 @@
+<div class="dialog-backdrop" *ngIf="isVisible">
+    <div class="dialog" [ngStyle]="{ 'width': isConfirmDialog ? '450px' : width }">
+        <div class="dialog-header">
+            <h2>{{ title }}</h2>
+            <button *ngIf="!isConfirmDialog" class="close-button" (click)="onClose()">x</button>
+        </div>
+        <div class="dialog-body">
+            <ng-container *ngIf="isConfirmDialog; else nonConfirmContent">
+                <p>{{ message }}</p>
+            </ng-container>
+            <ng-template #nonConfirmContent>
+                <ng-content></ng-content>
+            </ng-template>
+        </div>
+        <div class="dialog-footer" *ngIf="isConfirmDialog">
+            <app-button [type]="'primary'" (click)="cancel()">Cancel</app-button>
+            <app-button [type]="'danger'" (click)="confirm()">Delete</app-button>
+        </div>
+    </div>
+</div>
